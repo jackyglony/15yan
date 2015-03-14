@@ -27,6 +27,10 @@ use android studio 1.1.0
 
 * Mail: liuchen.park@gmail.com
 
+
+## 免责声明
+开源应用，非官方作品，禁止商用
+
 ## License
 ---
 ```
