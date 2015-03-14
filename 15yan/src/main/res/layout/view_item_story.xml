@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<org.liuyichen.fifteenyan.view.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:rippleAlpha="0.3"
+    app:rippleDelayClick="true"
+    app:rippleDimension="20dp"
+    app:rippleDuration="350"
+    app:rippleHover="true"
+    app:rippleLayoutColor="#fff"
+    app:rippleOverlay="true" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/item_horizontal_margin"
+        android:paddingRight="@dimen/item_horizontal_margin"
+        android:paddingTop="@dimen/item_vertical_margin"
+        android:paddingBottom="@dimen/item_vertical_margin">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/item_text_title_size" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="@dimen/item_subtitle_vertical_margin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/item_text_subtitle_size" />
+
+            <TextView
+                android:id="@+id/editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subtitle"
+                android:layout_marginTop="@dimen/item_footnote_vertical_margin"
+                android:textColor="@color/item_text_footnote_color"
+                android:textSize="@dimen/item_text_footnote_size" />
+
+            <TextView
+                android:id="@+id/readcost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/editor"
+                android:layout_alignTop="@+id/editor"
+                android:layout_marginLeft="@dimen/item_footnote_horizontal_margin"
+                android:textColor="@color/item_text_footnote_color"
+                android:textSize="@dimen/item_text_footnote_size" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/item_avatar_size"
+            android:layout_height="@dimen/item_avatar_size"
+            android:scaleType="center"
+            android:layout_marginLeft="@dimen/item_avatar_horizontal_margin" />
+    </LinearLayout>
+</org.liuyichen.fifteenyan.view.MaterialRippleLayout>

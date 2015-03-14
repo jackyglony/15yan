@@ -1,0 +1,72 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.0"
+
+    defaultConfig {
+        applicationId "org.liuyichen.fifteenyan"
+        minSdkVersion 9
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        renderscriptTargetApi 22
+        renderscriptSupportModeEnabled true
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            renderscriptDebuggable true
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    apt 'com.michaelpardo:ollie-compiler:0.3.2-SNAPSHOT'
+    apt 'com.squareup.dagger:dagger-compiler:1.2.2'
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:support-v4:22.0.0'
+    compile 'com.android.support:recyclerview-v7:22.0.0'
+    compile 'com.michaelpardo:ollie:0.3.2-SNAPSHOT'
+    compile 'com.squareup.dagger:dagger:1.2.2'
+    compile 'com.squareup.okio:okio:1.2.0'
+    compile 'com.squareup.okhttp:okhttp:2.2.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
+    compile 'com.squareup.picasso:picasso:2.5.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'in.srain.cube:ultra-ptr:1.0.7'
+    compile 'com.makeramen:roundedimageview:1.5.0'
+    compile 'com.github.traex.rippleeffect:library:1.2.3'
+    compile 'com.github.ksoichiro:android-observablescrollview:1.5.0'
+    compile 'com.hannesdorfmann:swipeback:1.0.0'
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        resourcePackageName 'org.liuyichen.fifteenyan'
+
+    }
+}
