@@ -3,6 +3,9 @@
 
 主要练习[square][1]公司的一些开源组建, 大爱其风格
 
+
+use android studio 1.1.0
+
 用到的依赖：
 
 * [ollie][2]
