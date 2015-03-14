@@ -16,7 +16,7 @@ use android studio 1.1.0
 * [roundedimageview][7]
 * [observablescrollview][8]
 * [swipeback][9]
-* [swipeback][10]
+* [material-ripple][10]
 
 
 截图：
