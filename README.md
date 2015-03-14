@@ -18,7 +18,7 @@
 
 截图：
 
-
+![截图][11]
 
 
 
@@ -40,3 +40,5 @@
 [8]: https://github.com/ksoichiro/Android-ObservableScrollView
 [9]: https://github.com/sockeqwe/SwipeBack
 [10]: https://github.com/balysv/material-ripple
+
+[11]: https://raw.githubusercontent.com/liuchenx/15yan/master/screenshot/Screenshot1.png
