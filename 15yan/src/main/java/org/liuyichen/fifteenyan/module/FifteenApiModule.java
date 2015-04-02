@@ -36,7 +36,7 @@ public class FifteenApiModule {
 
         RestAdapter restAdapter = new RestAdapter.Builder()
                 .setEndpoint(FifteenYanService.BASE_URL)
-                .setLogLevel(RestAdapter.LogLevel.FULL)
+            //    .setLogLevel(RestAdapter.LogLevel.FULL)
                 .setConverter(new GsonConverter(gson))
                 .build();
 

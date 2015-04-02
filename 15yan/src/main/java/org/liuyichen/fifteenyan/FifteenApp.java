@@ -19,7 +19,7 @@ public class FifteenApp extends Application {
             .with(this)
             .setName(FifteenConstant.DB_NAME)
             .setVersion(FifteenConstant.DB_VERSION)
-            .setLogLevel(Ollie.LogLevel.FULL)
+    //        .setLogLevel(Ollie.LogLevel.FULL)
             .setCacheSize(10 * 1024 * 1024)
             .init();
     }

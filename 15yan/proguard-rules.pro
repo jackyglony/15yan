@@ -145,3 +145,16 @@
     public static *** w(...);
     public static *** e(...);
 }
+
+-keepclassmembers class * {
+   public <init>(org.json.JSONObject);
+}
+
+-keep public class org.liuyichen.fifteenyan.R$*{
+    public static final int *;
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}

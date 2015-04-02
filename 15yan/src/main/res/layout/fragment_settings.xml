@@ -79,7 +79,7 @@
                 android:layout_alignParentLeft="true"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/settings_title_text_size"
-                android:text="@string/about" />
+                android:text="@string/version" />
 
         </RelativeLayout>
     </LinearLayout>

@@ -5,12 +5,20 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:name=".FifteenApp"
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <meta-data android:value="551d2a13fd98c5b5cc000130" android:name="UMENG_APPKEY" />
+        <meta-data android:value="wandoujia" android:name="UMENG_CHANNEL"/>
+
         <provider
             android:name=".provider.FifteenYanProvider"
             android:authorities="org.liuyichen.fifteenyan"
