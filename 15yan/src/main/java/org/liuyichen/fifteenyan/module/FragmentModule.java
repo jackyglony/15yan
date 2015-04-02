@@ -76,6 +76,7 @@ public class FragmentModule {
     PtrFrameLayout providePtrFrameLayout(PtrUIHandler header) {
 
         PtrFrameLayout ptrFrameLayout = (PtrFrameLayout)v.findViewById(R.id.ptr_frame);
+        ptrFrameLayout.setInterceptEventWhileWorking(true);
         ptrFrameLayout.setDurationToCloseHeader(1500);
         ptrFrameLayout.setHeaderView((View)header);
         ptrFrameLayout.addPtrUIHandler(header);
